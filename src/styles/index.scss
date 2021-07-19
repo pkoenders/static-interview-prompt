@@ -1,0 +1,64 @@
+@use 'sass:math';
+@import './reset';
+@import './typography';
+@import './variables';
+@import './mediaQueries';
+// @import './btns';
+
+body {
+  color: $darkText;
+}
+main {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  .contentWrapper {
+    display: flex;
+    flex-grow: 1;
+    overflow-x: hidden;
+    align-items: center;
+    .content {
+      text-align: center;
+      margin: 0 auto;
+      h1 {
+        padding: 16px;
+      }
+    }
+  }
+}
+
+button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.btn.btnPrimary {
+  color: $lightText;
+  background-color: $primaryColor;
+}
+.btn.btnSecondary {
+  background-color: $secondaryColor;
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18,
+.material-icons-round.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24,
+.material-icons-round.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36,
+.material-icons-round.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48,
+.material-icons-round.md-48 {
+  font-size: 48px;
+}

@@ -1,0 +1,113 @@
+@import '/src/styles/index';
+
+header.primaryHeader {
+  display: flex;
+  align-items: center;
+  height: 82px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: $headerBoxShadow;
+
+  div {
+    display: flex;
+    align-items: center;
+    width: $lg;
+    margin: 0 auto;
+    padding: 0 16px;
+    .hamburger {
+      display: none;
+    }
+    .brand {
+      svg {
+        width: 116px;
+        height: auto;
+      }
+    }
+    nav.primaryNav {
+      margin-left: auto;
+      display: flex;
+
+      ul {
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        color: $darkText;
+
+        @include respond-below(sm) {
+          display: none;
+        }
+        li {
+          position: relative;
+          display: block;
+          a,
+          span {
+            cursor: pointer;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+          }
+          a:hover {
+            text-decoration: none;
+          }
+
+          ul {
+            border-radius: 0 0 16px 16px;
+            padding: 16px 16px 24px 16px;
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: -12px;
+            background-color: #ffffff;
+            box-shadow: $headerBoxShadow;
+
+            li {
+              white-space: nowrap;
+              width: 100%;
+              a {
+                color: #37353e;
+              }
+              a:hover {
+                color: #2a2831;
+                // font-weight: bold;
+                width: fit-content;
+                border-radius: 4px;
+                background-color: $secondaryColor;
+              }
+            }
+          }
+
+          ul:before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            left: 0px;
+            height: 8px;
+            margin-top: -8px;
+            background-color: #ffffff;
+          }
+        }
+
+        li.isActive {
+          span {
+            i {
+              transform: rotate(180deg);
+              color: $primaryColor;
+            }
+          }
+          ul {
+            display: flex;
+          }
+        }
+      }
+      .sign-in {
+        display: flex;
+        grid-gap: 12px;
+      }
+    }
+  }
+}

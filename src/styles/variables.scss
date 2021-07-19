@@ -1,0 +1,32 @@
+// Typography
+$font-size: 100%; /*16px*/
+// Scale
+// 1.076 - Minor second
+// 1.125 - Major second
+// 1.200 - Minor third
+// 1.250 - Major third
+// 1.333 - Perfect fourth
+// 1.414 - Augmented fourth
+// 1.500 - Perfect fith
+// 1.6.18 - Augmented fourth
+$ratio: 1.25;
+
+/* Calculate values */
+// $h6: $font-size * $ratio;
+$h5: $font-size * $ratio;
+$h4: $h5 * $ratio;
+$h3: $h4 * $ratio;
+$h2: $h3 * $ratio;
+$h1: $h2 * $ratio;
+
+$line-height: 1.333;
+
+//Colors
+$lightText: #eff0f1;
+$darkText: #37353e;
+
+$primaryColor: #ffa044;
+$secondaryColor: #ffe8a8;
+$tertiaryColor: #228bb4;
+
+$headerBoxShadow: 0px 4px 8px 0px rgb(0 0 0 / 19%);
