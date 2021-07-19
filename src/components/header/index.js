@@ -4,9 +4,11 @@ import Brand from '../brand/'
 import './index.scss'
 
 const Header = () => {
-  window.addEventListener('click', function () {
-    handleCloseNav()
-  })
+  if (typeof window !== 'undefined') {
+    window.addEventListener('click', function () {
+      handleCloseNav()
+    })
+  }
 
   function handleToggleNav(e) {
     e.stopPropagation()
